@@ -50,7 +50,7 @@ def depurar_archivo(nombre_archivo):
         total_valores_despues = df.size
         total_nulos = df.isna().sum().sum()
 
-        nombre_salida = os.path.join(ruta_salida, f"limpio_{nombre_archivo}")
+        nombre_salida = os.path.join(ruta_salida, nombre_archivo)
         df.to_csv(nombre_salida, index=False)
         agregar_mensaje(f"💾 Archivo limpio guardado en: {nombre_salida}")
         agregar_mensaje(f"✅ Total de valores antes: {total_valores_antes}, después: {total_valores_despues}, nulos: {total_nulos}")
